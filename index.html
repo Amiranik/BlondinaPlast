@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блондина Пласт | ПВЦ и Алуминиумска Столарија</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <img src="IMG_0901.jpg" alt="Blondina Plast Logo" class="main-logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Почетна</a></li>
+        <li><a href="javascript:void(0)" id="projectsLink">Проекти</a></li>
+
+        <li><a href="javascript:void(0)" id="contactLink">Контакт</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Архитектура во Стакло</h1>
+        <p>
+          Врвни ПВЦ и алуминиумски решенија. Квалитет и прецизност кои го градат
+          вашиот дом.
+        </p>
+        <button class="btn" id="quoteBtn">Побарај понуда</button>
+      </div>
+    </section>
+
+    <script>
+      // Порака за понуда (Погон)
+      document.getElementById("quoteBtn").onclick = function () {
+        alert("Наскоро ќе има понуда. Погонот сè уште не е готов.");
+      };
+
+      // Порака за Проекти (Градови)
+      document.getElementById("projectsLink").onclick = function () {
+        alert("Наши реализирани проекти во: Будва / Задар / Хамбург");
+      };
+
+      // Порака за Контакт (Телефон)
+      document.getElementById("contactLink").onclick = function () {
+        alert("Контакт телефон: 070070070");
+      };
+    </script>
+  </body>
+</html>

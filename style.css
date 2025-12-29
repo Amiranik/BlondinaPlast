@@ -1,0 +1,143 @@
+/* Дефинирање на бои и променливи */
+:root {
+  --temna: #1a1a1a;
+  --bela: #ffffff;
+  --zlata: #f1c40f; /* Инспирирано од жолтата боја во логото */
+  --sina: #2980b9; /* Инспирирано од сината боја во логото */
+  --senka: 0px 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--temna);
+  overflow-x: hidden;
+}
+
+/* Навигација */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Ефект на заматено стакло */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Стил за кружното лого */
+.main-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%; /* Го прави логото круг */
+  object-fit: cover;
+  border: 3px solid var(--zlata);
+  box-shadow: var(--senka);
+  transition: all 0.3s ease;
+}
+
+.main-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--sina);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: var(--bela);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--zlata);
+}
+
+/* Главна секција со позадинска слика */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url("IMG_0373.jpg"); /* Вашата слика */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--bela);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: var(--senka);
+  font-weight: 900;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Копче за понуда */
+.btn {
+  padding: 20px 50px;
+  background-color: var(--zlata);
+  color: var(--temna);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px rgba(241, 196, 15, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--sina);
+  color: var(--bela);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(41, 128, 185, 0.5);
+}
+
+/* Мобилна адаптација */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-logo {
+    height: 80px;
+    width: 80px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
